@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    .image img {
+      display: none; /* Hide all images by default */
+    }
+    .image img.show {
+      display: block; /* Display images with the "show" class */
+    }
+    img{
+      width: 400px;
+    
+    }
+  </style>
+</head>
+<body>
+  <div class="btn">
+    <button onclick="filterImages('All')">All</button>
+    <button onclick="filterImages('Web-Design')">Web Design</button>
+    <button onclick="filterImages('Web-Developer')">Web Developer</button>
+    <button onclick="filterImages('UI-UX-Design')">UI/UX Design</button>
+  </div>
+  <div class="image">
+    <div class="Web-Design">
+      <img src="image/Screenshot 2024-01-12 125325.png" alt="" class="show" />
+      <img src="image/Screenshot 2024-01-12 125427.png" alt="" class="show" />
+      <img src="image/Screenshot 2024-01-12 125708.png" alt="" class="show" />
+    </div>
+    <div class="Web-Developer">
+      <img src="image/Screenshot 2024-01-12 134408.png" alt="" class="show" />
+      <img src="image/Screenshot 2024-03-05 105112.png" alt="" class="show" />
+      <img src="image/Screenshot 2024-01-12 134408.png" alt="" class="show" />
+    </div>
+    <div class="UI-UX-Design">
+      <img src="ui-ux-design-image1.jpg" alt="" class="show" />
+      <img src="ui-ux-design-image2.jpg" alt="" class="show" />
+      <img src="ui-ux-design-image3.jpg" alt="" class="show" />
+    </div>
+  </div>
+
+  
+</body>
+</html>

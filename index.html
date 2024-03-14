@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Portfolio</title>
+    
+    <style>
+      body {
+        background-color: #f6f6f9;
+        font-family: "Poppins", sans-serif;
+        margin: 0;
+        padding: 0;
+        overflow-x: hidden;
+        color: #0e0d17;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .container {
+        width: 100%;
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .info {
+        text-align: center;
+        margin-bottom: 50px;
+      }
+
+      h1 {
+        font-size: 36px;
+
+        span.auto-type {
+          background: linear-gradient(to right, #7468ac, #bb9681);
+          -webkit-background-clip: text;
+          background-clip: text;
+          color: transparent;
+          border-bottom: 3px solid #cea6ad;
+          padding-bottom: 5px;
+        }
+      }
+
+      section {
+        height: 100vh;
+        width: 100%;
+        position: absolute;
+        top: 100%;
+        left: 50%;
+        transform: translateX(-50%);
+        background-color: #f6f6f9;
+        transition: top 0.5s ease;
+        padding: 20px;
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .container:hover section {
+        top: 0;
+      }
+
+      .navbar {
+        border-radius: 10px;
+        padding: 10px 20px;
+        margin-bottom: 20px;
+      }
+
+      .navbar ul {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+        display: flex;
+      }
+
+      .navbar li {
+        margin-right: 20px;
+      }
+      
+      .navbar li a.active {
+        border-bottom: 3px solid #bb9681;
+      }
+
+      .navbar a {
+        text-decoration: none;
+        color: black;
+        font-weight: 400;
+        font-size: 20px;
+        transition: color 0.3s ease;
+      }
+
+      .navbar a:hover {
+        color: #bb9681;
+        border-bottom: 3px solid #7468ac;
+      }
+
+      .div {
+        width: 100%;
+        height: 100%;
+      }
+
+      .auto-type {
+        margin-bottom: 20px;
+        border-bottom: 5px solid #7468ac;
+        width: 300px;
+        background-image: linear-gradient(to right, #7468ac, #bb9681);
+        /* Add linear gradient background */
+        -webkit-background-clip: text;
+        /* Clip text to background */
+        background-clip: text;
+        /* Clip text to background */
+        -webkit-text-fill-color: transparent;
+      }
+
+      .cursor {
+        z-index: 999;
+        position: fixed;
+        background-color: #cea6ad;
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        pointer-events: none;
+        animation: colors 0.5s infinite alternate;
+        /* Animation added */
+        display: none;
+        transition: 0.1s;
+        transform: translate(-50%, -50%);
+        top: 0;
+        left: 0;
+      }
+
+      @keyframes colors {
+        0% {
+          filter: hue-rotate(0deg);
+        }
+
+        100% {
+          filter: hue-rotate(360deg);
+        }
+      }
+
+      .cursor:before {
+        content: "";
+        position: absolute;
+        width: 25px;
+        height: 25px;
+        opacity: 0.2;
+        border: 1px solid #7468ac;
+        border-radius: 50%;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="cursor"></div>
+    <div class="container">
+      <div class="info">
+        <h1>Welcome to My Portfolio</h1>
+        <h2>I'm <span class="auto-type"></span></h2>
+      </div>
+      <section>
+        <div class="navbar">
+          <ul>
+            <!-- <li><a href="#" onclick="loadPage('index.html')">Home</a></li> -->
+            <li><a href="#" onclick="loadPage('about.html')"  class="active" >About</a></li>
+            <li>
+              <a href="#" onclick="loadPage('education.html')">Education</a>
+            </li>
+
+            <li><a href="#" onclick="loadPage('skill.html')">Skill</a></li>
+            <li><a href="#" onclick="loadPage('contact.html')">Contact</a></li>
+          </ul>
+        </div>
+        <div class="div" id="pageContent">
+          <div class="personal-info">
+            <h2>About Me</h2>
+            <p>
+              I'm a Creative Director, Web Designer, and Web Developer
+              specializing in UI/UX design. I enjoy turning complex problems
+              into simple, beautiful, and intuitive designs.
+            </p>
+            <p>
+              My job is to build your website so that it is functional and
+              user-friendly while also being attractive. Moreover, I add a
+              personal touch to your product and ensure that it's eye-catching
+              and easy to use. My aim is to convey your message and identity in
+              the most creative way possible. I have Intership creating web
+              designs for many famous brand companies.
+            </p>
+            <div class="Intership">
+              <h3>Intership <i class="fas fa-briefcase"></i></h3>
+              <ul>
+                <li>
+                  Internship as Web Developer at Vinyasa Tech (August 2023 -
+                  February 2024)
+                </li>
+                <li><i class="fas fa-tasks"></i>Developed 3-6 live projects</li>
+                <li>
+                  <i class="fas fa-code"></i>Proficient in both Frontend and
+                  Backend development
+                </li>
+                <li>
+                  <i class="fas fa-server"></i>Handled website hosting
+                  responsibilities
+                </li>
+                <li>
+                  <i class="fas fa-paint-brush"></i>Contributed as a graphic
+                  designer for the company
+                </li>
+                <li>
+                  <i class="fas fa-globe"></i>Independently created a website
+                  for a foreign client, assuming full responsibility for both
+                  backend and frontend development
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <script>
+      // Initialize Typed.js
+      var typed = new Typed(".auto-type", {
+        strings: ["a Web Developer", "a Web Designer", "an UX/UI Designer"],
+        typeSpeed: 150,
+        backSpeed: 150,
+        loop: true,
+      });
+
+      // Function to load content from another page
+      function loadPage(pageUrl) {
+        fetch(pageUrl)
+          .then((response) => response.text())
+          .then((data) => {
+            document.getElementById("pageContent").innerHTML = data;
+          })
+          .catch((error) => console.error("Error:", error));
+      }
+
+      // Load the About page when the section is opened
+      document
+        .querySelector("section")
+        .addEventListener("transitionend", function (event) {
+          if (
+            event.target.tagName === "SECTION" &&
+            event.propertyName === "top" &&
+            event.target.style.top === "0px"
+          ) {
+            loadPage("about.html");
+          }
+        });
+
+      // Cursor following mouse
+      const cursor = document.querySelector(".cursor");
+
+      document.addEventListener("mousemove", (e) => {
+        cursor.style.top = e.pageY + "px";
+        cursor.style.left = e.pageX + "px";
+      });
+
+      // Cursor display on mouseenter
+      document.addEventListener("mouseenter", () => {
+        cursor.style.display = "block";
+      });
+
+      // Cursor hide on mouseleave
+      document.addEventListener("mouseleave", () => {
+        cursor.style.display = "none";
+      });
+      function filterImages(className) {
+        var images = document.querySelectorAll(".image img");
+        images.forEach(function (image) {
+          if (
+            className === "All" ||
+            image.parentElement.classList.contains(className)
+          ) {
+            image.classList.add("show");
+          } else {
+            image.classList.remove("show");
+          }
+        });
+      }
+      filterImages("All");
+    </script>
+  </body>
+</html>
