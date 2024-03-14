@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact Me</title>
+  <style>
+    /* body {
+        font-family: "Poppins", sans-serif;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+      }
+
+      .container-box {
+        width: 80%;
+        background-color: #ffffff;
+        border-radius: 10px;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        padding: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+      } */
+
+    .container-box {
+      display: flex;
+      flex-direction: row;
+
+      align-items: center;
+      justify-content: center;
+    }
+
+    .info {
+      display: flex;
+      flex-direction: column;
+      text-align: center;
+      margin-bottom: 20px;
+      padding: 10px 20px;
+      width: 400px;
+    }
+
+    .info h3 {
+      margin: 5px 0;
+      font-size: 18px;
+      color: #6c757d;
+    }
+
+    .info p {
+      margin: 5px 0;
+      font-size: 16px;
+      color: #6c757d;
+    }
+
+    .info>div:not(:last-child) {
+      margin-bottom: 10px;
+      /* Separate each div */
+    }
+
+    .info>div {
+      background-color: #f9f9f9;
+      padding: 10px;
+      border-radius: 5px;
+      transition: transform 0.3s ease;
+      /* Add hover animation */
+    }
+
+    .info>div:hover {
+      transform: translateY(-5px);
+      /* Move div up on hover */
+    }
+
+    form {
+      width: 100%;
+      max-width: 500px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-top: 40px;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    textarea {
+      width: 100%;
+      padding: 12px;
+      margin: 10px 0;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      box-sizing: border-box;
+      font-size: 16px;
+      background-color: #f9f9f9;
+    }
+
+    textarea {
+      height: 150px;
+    }
+
+    button {
+      padding: 12px 30px;
+      margin-top: 20px;
+      border: none;
+      border-radius: 5px;
+      background-color: #6c5ce7;
+      color: #ffffff;
+      font-size: 16px;
+      cursor: pointer;
+      align-items: left;
+      transition: background-color 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #4834d4;
+    }
+
+    .Social-link {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .Social-link i {
+      font-size: 24px;
+      margin: 5px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container-box">
+    <div class="info">
+      <div class="gmail">
+        <h3>Gmail</h3>
+        <p>sowjanyaprabhuh08@gmail.com</p>
+      </div>
+      <div class="Address">
+        <h3>Address</h3>
+        <p>Mangalore, India</p>
+      </div>
+      <div class="Social-link">
+        <h3>Social-Link</h3>
+        <div>
+          <a href="https://www.instagram.com/sph.sowjanya/">
+            <img width="35" height="35" src="https://img.icons8.com/fluency/48/instagram-new.png"
+              alt="instagram-new" /></a>
+          <a href="https://github.com/SowjanyaPrabhuH"><img width="35" height="35"
+              src="https://img.icons8.com/material-rounded/48/github.png" alt="github" /></a>
+          <a href="https://www.linkedin.com/in/sowjanya-prabhu-h-5ab1b2293/">
+            <img width="35" height="35" src="https://img.icons8.com/color/48/linkedin.png" alt="linkedin" /></a>
+        </div>
+      </div>
+    </div>
+    <form action="https://formsubmit.co/el/confirm/557f38c7a3fe421f95307aa26ae133f1" method="POST">
+      <input type="text" id="name" name="name" required placeholder="Name" />
+      <input type="email" id="email" name="email" required placeholder="Email" />
+      <textarea id="message" name="message" rows="4" required placeholder="Message"></textarea>
+      <button type="submit">Submit</button>
+    </form>
+  </div>
+  <!-- Font Awesome CDN for icons -->
+  <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+</body>
+
+</html>
